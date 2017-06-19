@@ -19,8 +19,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 class PokemonController extends Controller
 {
     /**
-     * @Route("/", name="pokemon_index)
-     * @Method("GET")
+     * @Route("/")
      */
     public function indexAction()
     {
