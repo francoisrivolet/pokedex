@@ -23,6 +23,12 @@ class PokemonController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('PokedexBundle:pokemon:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $pokemons = $em->getRepository('PokedexBundle:Pokemon')->findAll();
+
+        return $this->render('pokemon/index.html.twig', array(
+            'pokemons' => $pokemons,
+        ));
     }
 }

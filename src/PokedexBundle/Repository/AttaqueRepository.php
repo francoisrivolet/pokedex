@@ -1,6 +1,9 @@
 <?php
 
 namespace PokedexBundle\Repository;
+use Doctrine\ORM\EntityRepository;
+use PokedexBundle\Entity\Attaque;
+use Doctrine\ORM\QueryBuilder;
 
 /**
  * AttaqueRepository
