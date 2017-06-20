@@ -113,4 +113,9 @@ class Type
         $this->couleur = $couleur;
     }
 
+    public function __toString() {
+        return $this->getNom();
+    }
+
+
 }

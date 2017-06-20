@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Attaques list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Numero</th>
+                <th>Nom</th>
+                <th>Nomen</th>
+                <th>Puissance</th>
+                <th>Precision</th>
+                <th>Pp</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for attaque in attaques %}
+            <tr>
+                <td><a href="{{ path('attaque_show', { 'id': attaque.id }) }}">{{ attaque.id }}</a></td>
+                <td>{{ attaque.numero }}</td>
+                <td>{{ attaque.nom }}</td>
+                <td>{{ attaque.nomEn }}</td>
+                <td>{{ attaque.puissance }}</td>
+                <td>{{ attaque.precision }}</td>
+                <td>{{ attaque.pp }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('attaque_show', { 'id': attaque.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('attaque_edit', { 'id': attaque.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('attaque_new') }}">Create a new attaque</a>
+        </li>
+    </ul>
+{% endblock %}

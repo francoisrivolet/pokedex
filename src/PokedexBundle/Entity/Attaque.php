@@ -74,6 +74,7 @@ class Attaque
 
     /**
      * @ORM\ManyToOne(targetEntity="Type")
+     * @ORM\JoinColumn(referencedColumnName="id_type", nullable=true)
      * @var Type
      */
     private $type;
