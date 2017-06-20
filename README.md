@@ -45,6 +45,13 @@ insert into pokemon values
 (null,4,null,"008","Carabaffe",null,null,null,null,null,null,null,null,null,null,null,"http://www.pokepedia.fr/images/9/97/Miniat_6_x_008.png"),
 (null,4,null,"009","Tortank",null,null,null,null,null,null,null,null,null,null,null,"http://www.pokepedia.fr/images/8/86/Miniat_6_x_009.png");
 
+#attaque
+insert into attaque values
+(null,10,null,"Charge",null,40,100,35),
+(null,10,null,"Rugissement",null,null,100,40),
+(null,11,null,"Fouet Lianes",null,45,100,25),
+(null,10,null,"Griffe",null,40,100,35),
+(null,7,null,"Flammèche",null,40,100,25);
 
 
 ========
