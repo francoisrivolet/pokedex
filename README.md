@@ -1,6 +1,7 @@
 pokedex
 =======
 COMMANDES BDD:
+
 php bin/console doctrine:database:drop --force -q
 
 php bin/console doctrine:database:create
