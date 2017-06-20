@@ -33,7 +33,7 @@ class Attaque
     private $id;
 
     /**
-     * @ORM\Column(unique=true,type="string", name="numero")
+     * @ORM\Column(unique=true,type="string", name="numero", nullable=true)
      */
     private $numero;
 
@@ -45,7 +45,7 @@ class Attaque
     private $nom;
 
     /**
-     * @ORM\Column(type="string", name="nom_en")
+     * @ORM\Column(type="string", name="nom_en", nullable=true)
      *
      * @var string
      */
@@ -59,14 +59,14 @@ class Attaque
     private $puissance;
 
     /**
-     * @ORM\Column(type="integer", name="precision_attaque")
+     * @ORM\Column(type="integer", name="precision_attaque", nullable=true)
      *
      * @var integer
      */
     private $precision;
 
     /**
-     * @ORM\Column(type="integer", name="pp")
+     * @ORM\Column(type="integer", name="pp", nullable=true)
      *
      * @var integer
      */

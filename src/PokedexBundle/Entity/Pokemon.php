@@ -44,84 +44,84 @@ class Pokemon
     private $nom;
 
     /**
-     * @ORM\Column(type="string", name="nom_en")
+     * @ORM\Column(type="string", name="nom_en", nullable=true)
      *
      * @var string
      */
     private $nomEn;
 
     /**
-     * @ORM\Column(type="float", name="poids")
+     * @ORM\Column(type="float", name="poids", nullable=true)
      *
      * @var float
      */
     private $poids;
 
     /**
-     * @ORM\Column(type="float", name="taille")
+     * @ORM\Column(type="float", name="taille", nullable=true)
      *
      * @var float
      */
     private $taille;
 
     /**
-     * @ORM\Column(type="integer", name="attaque")
+     * @ORM\Column(type="integer", name="attaque", nullable=true)
      *
      * @var integer
      */
     private $attaque;
 
     /**
-     * @ORM\Column(type="integer", name="defense")
+     * @ORM\Column(type="integer", name="defense", nullable=true)
      *
      * @var integer
      */
     private $defense;
 
     /**
-     * @ORM\Column(type="integer", name="attaque_spe")
+     * @ORM\Column(type="integer", name="attaque_spe", nullable=true)
      *
      * @var integer
      */
     private $attaqueSpe;
 
     /**
-     * @ORM\Column(type="integer", name="defense_spe")
+     * @ORM\Column(type="integer", name="defense_spe", nullable=true)
      *
      * @var integer
      */
     private $defenseSpe;
 
     /**
-     * @ORM\Column(type="integer", name="vitesse")
+     * @ORM\Column(type="integer", name="vitesse", nullable=true)
      *
      * @var integer
      */
     private $vitesse;
 
     /**
-     * @ORM\Column(type="text", name="description")
+     * @ORM\Column(type="text", name="description", nullable=true)
      *
      * @var string
      */
     private $description;
 
     /**
-     * @ORM\Column(type="integer", name="nb_pas_eclosion")
+     * @ORM\Column(type="integer", name="nb_pas_eclosion", nullable=true)
      *
      * @var integer
      */
     private $nbPasEclosion;
 
     /**
-     * @ORM\Column(type="string", name="img_generale")
+     * @ORM\Column(type="string", name="img_generale", nullable=true)
      *
      * @var string
      */
     private $imgGenerale;
 
     /**
-     * @ORM\Column(type="string", name="img_miniature")
+     * @ORM\Column(type="string", name="img_miniature", nullable=true)
      *
      * @var string
      */
@@ -137,7 +137,7 @@ class Pokemon
 
     /**
      * @ORM\ManyToOne(targetEntity="Type")
-     * @ORM\JoinColumn(name="type2", referencedColumnName="id_type")
+     * @ORM\JoinColumn(name="type2", referencedColumnName="id_type", nullable=true)
      *
      * @var Type
      */

@@ -36,14 +36,14 @@ class Type
     private $nom;
 
     /**
-     * @ORM\Column(type="string", name="nom_en")
+     * @ORM\Column(type="string", name="nom_en", nullable=true)
      *
      * @var string
      */
     private $nomEn;
 
     /**
-     * @ORM\Column(type="string", name="couleur")
+     * @ORM\Column(type="string", name="couleur", nullable=true)
      *
      * @var string
      */
