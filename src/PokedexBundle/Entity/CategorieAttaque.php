@@ -29,7 +29,7 @@ class CategorieAttaque
     private $id;
 
     /**
-     * @ORM\Column(type="string", name="nom_fr"
+     * @ORM\Column(type="string", name="nom_fr")
      * @var string
      */
     private $nom;
