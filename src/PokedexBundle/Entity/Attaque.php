@@ -73,11 +73,18 @@ class Attaque
     private $pp;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Type")
+     * @ORM\OneToOne(targetEntity="Type")
      * @ORM\JoinColumn(referencedColumnName="id_type", nullable=true)
      * @var Type
      */
     private $type;
+
+    /**
+     * @ORM\OneToOne(targetEntity="CategorieAttaque")
+     * @ORM\JoinColumn(referencedColumnName="id_categorie_attaque", nullable=true)
+     * @var CategorieAttaque
+     */
+    private $categorie;
 
     /**
      * @return mixed
