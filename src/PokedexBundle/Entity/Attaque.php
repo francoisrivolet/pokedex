@@ -73,8 +73,8 @@ class Attaque
     private $pp;
 
     /**
-     * @ORM\OneToOne(targetEntity="Type")
-     * @ORM\JoinColumn(referencedColumnName="id_type", nullable=true)
+     * @ORM\ManyToOne(targetEntity="Type")
+     * @ORM\JoinColumn(name="type",referencedColumnName="id_type", nullable=true)
      * @var Type
      */
     private $type;
@@ -213,4 +213,22 @@ class Attaque
     {
         $this->type = $type;
     }
+
+    /**
+     * @return CategorieAttaque
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
+
+    /**
+     * @param CategorieAttaque $categorie
+     */
+    public function setCategorie($categorie)
+    {
+        $this->categorie = $categorie;
+    }
+
+
 }

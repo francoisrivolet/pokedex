@@ -13,7 +13,7 @@ class AttaqueType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('numero')->add('nom')->add('nomEn')->add('puissance')->add('precision')->add('pp')->add('type');
+        $builder->add('numero')->add('nom')->add('nomEn')->add('puissance')->add('precision')->add('pp')->add('type')->add('categorie');
     }
     
     /**
