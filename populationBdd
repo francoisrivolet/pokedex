@@ -38,3 +38,4 @@ insert into attaque values
 (null,11,null,null,"Fouet Lianes",null,45,100,25), 
 (null,10,null,null,"Griffe",null,40,100,35), 
 (null,7,null,null,"Flammèche",null,40,100,25);
+
