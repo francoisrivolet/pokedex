@@ -39,3 +39,4 @@ insert into attaque values
 (null,10,null,null,"Griffe",null,40,100,35), 
 (null,7,null,null,"Flammèche",null,40,100,25);
 
+#talent

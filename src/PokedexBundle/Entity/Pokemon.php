@@ -26,15 +26,11 @@ class Pokemon
 {
     /**
      * @ORM\Id()
-     * @ORM\Column(type="integer", name="id_pokemon")
+     * @ORM\Column(type="integer", name="id_pokemon", columnDefinition="INTEGER(3) ZEROFILL")
      * @ORM\GeneratedValue()
      */
     private $id;
 
-    /**
-     * @ORM\Column(unique=true,type="string", name="numero")
-     */
-    private $numero;
 
     /**
      * @ORM\Column(type="string", name="nom_fr")
@@ -144,6 +140,11 @@ class Pokemon
     private $type2;
 
     /**
+     * @ORM\ManyToMany(targetEntity="PokedexBundle\Entity\Talent", cascade={"persist"})
+     */
+    private $talents;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -157,22 +158,6 @@ class Pokemon
     public function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNumero()
-    {
-        return $this->numero;
-    }
-
-    /**
-     * @param mixed $numero
-     */
-    public function setNumero($numero)
-    {
-        $this->numero = $numero;
     }
 
     /**

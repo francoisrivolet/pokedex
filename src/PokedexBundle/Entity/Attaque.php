@@ -33,11 +33,6 @@ class Attaque
     private $id;
 
     /**
-     * @ORM\Column(unique=true,type="string", name="numero", nullable=true)
-     */
-    private $numero;
-
-    /**
      * @ORM\Column(type="string", name="nom_fr")
      *
      * @var string
@@ -87,6 +82,13 @@ class Attaque
     private $categorie;
 
     /**
+     * @ORM\Column(type="text", name="description", nullable=true)
+     *
+     * @var string
+     */
+    private $description;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -100,22 +102,6 @@ class Attaque
     public function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNumero()
-    {
-        return $this->numero;
-    }
-
-    /**
-     * @param mixed $numero
-     */
-    public function setNumero($numero)
-    {
-        $this->numero = $numero;
     }
 
     /**
@@ -229,6 +215,23 @@ class Attaque
     {
         $this->categorie = $categorie;
     }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
 
 
 }
