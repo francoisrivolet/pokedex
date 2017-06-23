@@ -2,21 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab9d3db2-a2a1-4ff4-8354-3401e8f56d93" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/attaque/edit.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/attaque/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/attaque/new.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/attaque/show.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/pokemon/edit.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/pokemon/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/pokemon/new.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/pokemon/show.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PokedexBundle/Controller/AttaqueController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PokedexBundle/Controller/PokemonController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PokedexBundle/Form/AttaqueType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PokedexBundle/Form/PokemonType.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PokedexBundle/Entity/Attaque.php" afterPath="$PROJECT_DIR$/src/PokedexBundle/Entity/Attaque.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PokedexBundle/Entity/Pokemon.php" afterPath="$PROJECT_DIR$/src/PokedexBundle/Entity/Pokemon.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PokedexBundle/Entity/Talent.php" afterPath="$PROJECT_DIR$/src/PokedexBundle/Entity/Talent.php" />
     </list>
@@ -37,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/src/PokedexBundle/Entity/Attaque.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="669">
-              <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+              <caret line="234" column="0" lean-forward="false" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
               <folding>
                 <element signature="e#124#156#0#PHP" expanded="true" />
               </folding>
@@ -48,10 +33,10 @@
       <file leaf-file-name="Pokemon.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PokedexBundle/Entity/Pokemon.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="142" column="64" lean-forward="false" selection-start-line="142" selection-start-column="64" selection-end-line="142" selection-end-column="64" />
+            <state relative-caret-position="672">
+              <caret line="448" column="33" lean-forward="false" selection-start-line="448" selection-start-column="33" selection-end-line="448" selection-end-column="33" />
               <folding>
-                <element signature="e#123#155#0#PHP" expanded="true" />
+                <element signature="e#124#172#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,11 +45,11 @@
       <file leaf-file-name="Talent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PokedexBundle/Entity/Talent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="63" column="26" lean-forward="false" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+            <state relative-caret-position="-2352">
+              <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
               <folding>
                 <element signature="e#7#90#0#PHP" expanded="true" />
-                <element signature="e#91#123#0#PHP" expanded="true" />
+                <element signature="e#125#157#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -459,15 +444,15 @@
       <workItem from="1497960412526" duration="5930000" />
       <workItem from="1498031192650" duration="4045000" />
       <workItem from="1498124334894" duration="5304000" />
-      <workItem from="1498210442560" duration="2830000" />
+      <workItem from="1498210442560" duration="4915000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25929000" />
+    <option name="totallyTimeSpent" value="28014000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1038" extended-state="0" />
+    <frame x="-8" y="0" width="1932" height="1038" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -882,7 +867,7 @@
     <entry file="file://$PROJECT_DIR$/src/PokedexBundle/Entity/Attaque.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="669">
-          <caret line="234" column="0" lean-forward="true" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+          <caret line="234" column="0" lean-forward="false" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
           <folding>
             <element signature="e#124#156#0#PHP" expanded="true" />
           </folding>
@@ -891,21 +876,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PokedexBundle/Entity/Talent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="63" column="26" lean-forward="false" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
+        <state relative-caret-position="-2352">
+          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
           <folding>
             <element signature="e#7#90#0#PHP" expanded="true" />
-            <element signature="e#91#123#0#PHP" expanded="true" />
+            <element signature="e#125#157#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PokedexBundle/Entity/Pokemon.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="142" column="64" lean-forward="false" selection-start-line="142" selection-start-column="64" selection-end-line="142" selection-end-column="64" />
+        <state relative-caret-position="672">
+          <caret line="448" column="33" lean-forward="false" selection-start-line="448" selection-start-column="33" selection-end-line="448" selection-end-column="33" />
           <folding>
-            <element signature="e#123#155#0#PHP" expanded="true" />
+            <element signature="e#124#172#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

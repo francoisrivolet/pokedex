@@ -7,8 +7,6 @@
  * Time: 21:51
  */
 namespace PokedexBundle\Entity;
-
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
@@ -419,35 +417,4 @@ class Pokemon
     }
 
 
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->talents = new ArrayCollection();
-    }
-
-    /**
-     * Add talent
-     *
-     * @param \PokedexBundle\Entity\Talent $talent
-     *
-     * @return Pokemon
-     */
-    public function addTalent(Talent $talent)
-    {
-        $this->talents[] = $talent;
-
-        return $this;
-    }
-
-    /**
-     * Remove talent
-     *
-     * @param \PokedexBundle\Entity\Talent $talent
-     */
-    public function removeTalent(Talent $talent)
-    {
-        $this->talents->removeElement($talent);
-    }
 }
