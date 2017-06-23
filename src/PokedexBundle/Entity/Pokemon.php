@@ -11,6 +11,7 @@ namespace PokedexBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Joi
 
 
 /**
@@ -143,6 +144,10 @@ class Pokemon
 
     /**
      * @ORM\ManyToMany(targetEntity="Talent")
+     * @JoinTable(name="pokemons_talents",
+     *      joinColumns={@JoinColumn(name="id_pokemon", referencedColumnName="id")},
+     *      inverseJoinColumns={@JoinColumn(name="id_talent", referencedColumnName="id")}
+     *      )
      */
     private $talents;
 
