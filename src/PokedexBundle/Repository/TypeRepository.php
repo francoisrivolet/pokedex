@@ -2,6 +2,10 @@
 
 namespace PokedexBundle\Repository;
 
+
+use Doctrine\ORM\EntityRepository;
+use PokedexBundle\Entity\Type;
+use Doctrine\ORM\QueryBuilder;
 /**
  * TypeRepository
  *

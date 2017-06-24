@@ -15,7 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="nom_statistique")
  *
- * @ORM\Entity(repositoryClass="PokedexBundle\Repository\NomStatistiqueRepository")
+ * @ORM\Entity
  **
  */
 class NomStatistique

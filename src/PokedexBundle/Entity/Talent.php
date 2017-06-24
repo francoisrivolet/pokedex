@@ -21,7 +21,6 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\Entity(repositoryClass="PokedexBundle\Repository\TalentRepository")
  *
  */
-
 class Talent
 {
     /**
