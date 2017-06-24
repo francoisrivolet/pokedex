@@ -51,7 +51,7 @@ class Nature
 
     /**
      * @ORM\ManyToOne(targetEntity="NomStatistique")
-     * @ORM\JoinColumn(name="augmente", referencedColumnName="id_nom_statistique", nullable=true)
+     * @ORM\JoinColumn(name="diminue", referencedColumnName="id_nom_statistique", nullable=true)
      *
      * @var NomStatistique
      */

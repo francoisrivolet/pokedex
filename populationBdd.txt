@@ -1,0 +1,87 @@
+#Type 
+insert into type values 
+(1,"Acier",null,null,null), 
+(2,"Combat",null,null,null), 
+(3,"Dragon",null,null,null), 
+(4,"Eau",null,null,null), 
+(5,"Electrik",null,null,null), 
+(6,"Fée",null,null,null), 
+(7,"Feu",null,null,null), 
+(8,"Glace",null,null,null), 
+(9,"Insecte",null,null,null), 
+(10,"Normal",null,null,null), 
+(11,"Plante",null,null,null), 
+(12,"Poison",null,null,null), 
+(13,"Psy",null,null,null), 
+(14,"Roche",null,null,null), 
+(15,"Sol",null,null,null), 
+(16,"Spectre",null,null,null), 
+(17,"Ténèbres",null,null,null), 
+(18,"Vol",null,null,null);
+
+#categorieAttaque
+insert into categorie_attaque values
+(1,"Physique",null,null),
+(2,"Spéciale",null,null),
+(3,"Autre",null,null);
+
+#nomStatistique
+insert into nom_statistique values
+(1,"Points de Vie",null),
+(2,"Attaque",null),
+(3,"Défense",null),
+(4,"Attaque spé",null),
+(5,"Défense spé",null),
+(6,"Vitesse",null);
+
+#nature
+insert into nature values
+(1,"Hardi",null,null,null),
+(2,"Solo",null,2,3),
+(3,"Rigide",null,2,4),
+(4,"Brave",null,2,6),
+(5,"Mauvais",null,2,5),
+(6,"Assuré",null,3,2),
+(7,"Docile",null,null,null),
+(8,"Malin",null,3,4),
+(9,"Relax",null,3,6),
+(10,"Lâche",null,3,5),
+(11,"Modeste",null,4,2),
+(12,"Doux",null,4,3),
+(13,"Pudique",null,null,null),
+(14,"Discret",null,4,6),
+(15,"Foufou",null,4,5),
+(16,"Timide",null,6,2),
+(17,"Pressé",null,6,3),
+(18,"Jovial",null,6,4),
+(19,"Sérieux",null,null,null),
+(20,"Naïf",null,6,5),
+(21,"Calme",null,5,2),
+(22,"Gentil",null,5,3),
+(23,"Prudent",null,5,4),
+(24,"Malpoli",null,5,6),
+(25,"Bizarre",null,null,null);
+
+
+#pokemon 
+insert into pokemon values 
+(1,11,12,"Bulbizarre","Bulbasaur",0.7,6.9,45,49,49,65,65,45,"La graine sur le dos de Bulbizarre est une réserve de nutriments. Il la fait doucement pousser en absorbant les rayons du soleil, et emmagasine de l'énergie dedans en vue de son évolution. S'il dépense trop souvent son énergie, il n'évoluera pas car l'ouverture de son bulbe dépend de ses réserves de nutriments.",null,"http://www.pokepedia.fr/images/e/ef/Bulbizarre-RFVF.png","http://www.pokepedia.fr/images/7/72/Miniat_6_x_001.png",45,70),
+(2,11,12,"Herbizarre","Ivysaur",1.0,13.0,60,62,63,80,80,60,"Le bulbe sur le dos de Herbizarre a éclos, dévoilant ainsi une fleur fermée. Plus il passe de temps au soleil, plus sa fleur se prépare à s'ouvrir, et quelques temps avant son évolution, il dégage une douce odeur fruitée. Attention à ses Tranch'herbes et à ses Fouets lianes.",null,"http://www.pokepedia.fr/images/4/44/Herbizarre-RFVF.png","http://www.pokepedia.fr/images/8/8e/Miniat_6_x_002.png",45,70),
+(3,11,12,"Florizarre","Venusaur",2.4,155.5,80,82,83,100,100,80,"Comme un panneau solaire, les pétales de la fleur de Florizarre transforment les rayons du soleil en énergie. Il est maître d'un troupeau de Herbizarre et de Bulbizarre, qu'il garde férocement. L'odeur se dégageant de sa fleur est exquise, mais mieux vaut ne pas s'approcher d'un Florizarre sauvage et de sa horde.",null,"http://www.pokepedia.fr/images/thumb/4/42/Florizarre-RFVF.png/1160px-Florizarre-RFVF.png","http://www.pokepedia.fr/images/b/b0/Miniat_6_x_003.png",45,70),
+(4,7,null,"Salamèche","Charmander",0.6,8.5,39,52,43,60,50,65,"De récentes études prouvent que la flamme qui brûle sur la queue de Salamèche indique son état de santé, mais aussi son caractère. S'il se sent faible, la flamme sera toute petite. Et si par malheur sa flamme s'éteint, il meurt, car c'est le seul moyen pour lui de se refroidir.",null,"http://www.pokepedia.fr/images/thumb/8/89/Salam%C3%A8che-RFVF.png/795px-Salam%C3%A8che-RFVF.png","http://www.pokepedia.fr/images/0/00/Miniat_6_x_004.png",45,70),
+(5,7,null,"Reptincel","Charmeleon",1.1,19.0,58,64,58,80,65,80,"Reptincel est un Pokémon sauvage, difficile à maîtriser. Beaucoup de dresseurs trouvent leur Pokémon changé à leur évolution, et parfois il échappe à leur contrôle. Ses griffes acérées sont des armes redoutables, et quand il se bat, sa flamme prends une couleur bleue-argentée.",null,"http://www.pokepedia.fr/images/6/64/Reptincel-RFVF.png","http://www.pokepedia.fr/images/6/6a/Miniat_6_x_005.png",45,70),
+(6,7,18,"Dracaufeu","Charizard",1.7,90.5,78,84,78,109,85,100,"Pokémon noble, Dracaufeu est aussi réputé pour avoir sale caractère. Il crache d'impressionnants jets de flammes, et ses ailes lui permettent de voler à 1400 mètres d'altitude. Cependant, si son dresseur possède assez de détermination pour lui prouver que c'est lui le maître, il peut devenir extrêmement puissant.",null,"http://www.pokepedia.fr/images/thumb/1/17/Dracaufeu-RFVF.png/1146px-Dracaufeu-RFVF.png","http://www.pokepedia.fr/images/a/a5/Miniat_6_x_006.png",45,70),
+(7,4,null,"Carapuce","Squirtle",0.5,9.0,44,48,65,50,64,43,"Les bébés Carapuce sont extrêmement vulnérables à la naissance, car leur carapace est toute molle. C'est pourquoi ils boivent régulièrement une eau riche en minéraux. Elle devient ensuite dure comme de la pierre. S'il est menacé, il se réfugie à l'intérieur et envoie un jet d'eau à son agresseur.",null,"http://www.pokepedia.fr/images/thumb/c/cc/Carapuce-RFVF.png/870px-Carapuce-RFVF.png","http://www.pokepedia.fr/images/3/3d/Miniat_6_x_007.png",45,70),
+(8,4,null,"Carabaffe","Wartortle",1.0,22.5,59,63,80,65,80,58,"Carabaffe est un nageur émérite. Il contrôle efficacement ses oreilles et sa queue pour s'en servir de gouvernail. C'est un pokémon très apprécié des pompiers, car il crache de puissants jets d'eau tout en pouvant se faufiler un peu partout. Il est pacifique, mais il reste puissant.",null,"http://www.pokepedia.fr/images/2/2a/Carabaffe-RFVF.png","http://www.pokepedia.fr/images/9/97/Miniat_6_x_008.png",45,70),
+(9,4,null,"Tortank","Blastoise",1.6,85.5,79,83,100,85,105,78,"Malgré sa puissance et son apparence imposante, Tortank est très apprécié car il a très bon caractère. C'est un pokémon à la nature douce et même un enfant de 7 ans pourrait le contrôler. Mais il est redoutable au combat. Si ses griffes s'ancrent dans le sol, c'est qu'il va tirer un puissant jet d'eau de ses canons.",null,"http://www.pokepedia.fr/images/thumb/2/24/Tortank-RFVF.png/828px-Tortank-RFVF.png","http://www.pokepedia.fr/images/8/86/Miniat_6_x_009.png",45,70);
+
+
+#attaque 
+insert into attaque values 
+(null,10,null,null,"Charge",null,40,100,35), 
+(null,10,null,null,"Rugissement",null,0,100,40), 
+(null,11,null,null,"Fouet Lianes",null,45,100,25), 
+(null,10,null,null,"Griffe",null,40,100,35), 
+(null,7,null,null,"Flammèche",null,40,100,25);
+
+#talent
