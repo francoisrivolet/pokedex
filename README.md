@@ -8,6 +8,8 @@ php bin/console doctrine:database:create
 
 php bin/console doctrine:schema:update --force
 
+php app/console generate:doctrine:crud --entity=AcmeBlogBundle:Post
+
 =========
 
 POPULATION BDD:
