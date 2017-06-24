@@ -33,11 +33,6 @@ class Attaque
     private $id;
 
     /**
-     * @ORM\Column(unique=true,type="string", name="numero", nullable=true)
-     */
-    private $numero;
-
-    /**
      * @ORM\Column(type="string", name="nom_fr")
      *
      * @var string
@@ -73,8 +68,8 @@ class Attaque
     private $pp;
 
     /**
-     * @ORM\OneToOne(targetEntity="Type")
-     * @ORM\JoinColumn(referencedColumnName="id_type", nullable=true)
+     * @ORM\ManyToOne(targetEntity="Type")
+     * @ORM\JoinColumn(name="type",referencedColumnName="id_type", nullable=true)
      * @var Type
      */
     private $type;
@@ -85,6 +80,13 @@ class Attaque
      * @var CategorieAttaque
      */
     private $categorie;
+
+    /**
+     * @ORM\Column(type="text", name="description", nullable=true)
+     *
+     * @var string
+     */
+    private $description;
 
     /**
      * @return mixed
@@ -100,22 +102,6 @@ class Attaque
     public function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNumero()
-    {
-        return $this->numero;
-    }
-
-    /**
-     * @param mixed $numero
-     */
-    public function setNumero($numero)
-    {
-        $this->numero = $numero;
     }
 
     /**
@@ -213,4 +199,39 @@ class Attaque
     {
         $this->type = $type;
     }
+
+    /**
+     * @return CategorieAttaque
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
+
+    /**
+     * @param CategorieAttaque $categorie
+     */
+    public function setCategorie($categorie)
+    {
+        $this->categorie = $categorie;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+
+
 }
