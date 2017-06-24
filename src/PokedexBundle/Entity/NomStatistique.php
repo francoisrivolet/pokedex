@@ -1,10 +1,9 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: Fanfan2
- * Date: 19/06/2017
- * Time: 21:52
+ * Date: 24/06/2017
+ * Time: 02:55
  */
 
 namespace PokedexBundle\Entity;
@@ -14,16 +13,16 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Type
  *
- * @ORM\Table(name="type")
+ * @ORM\Table(name="nom_statistique")
  *
- * @ORM\Entity(repositoryClass="PokedexBundle\Repository\TypeRepository")
+ * @ORM\Entity(repositoryClass="PokedexBundle\Repository\NomStatistiqueRepository")
  **
  */
-class Type
+class NomStatistique
 {
     /**
      * @ORM\Id()
-     * @ORM\Column(type="integer", name="id_type")
+     * @ORM\Column(type="integer", name="id_nom_statistique")
      * @ORM\GeneratedValue()
      */
     private $id;
@@ -41,20 +40,6 @@ class Type
      * @var string
      */
     private $nomEn;
-
-    /**
-     * @ORM\Column(type="string", name="couleur", nullable=true)
-     *
-     * @var string
-     */
-    private $couleur;
-
-    /**
-     * @ORM\Column(type="string", name="icon", nullable=true)
-     *
-     * @var string
-     */
-    private $icon;
 
     /**
      * @return mixed
@@ -103,42 +88,4 @@ class Type
     {
         $this->nomEn = $nomEn;
     }
-
-    /**
-     * @return string
-     */
-    public function getCouleur()
-    {
-        return $this->couleur;
-    }
-
-    /**
-     * @param string $couleur
-     */
-    public function setCouleur($couleur)
-    {
-        $this->couleur = $couleur;
-    }
-
-    /**
-     * @return string
-     */
-    public function getIcon()
-    {
-        return $this->icon;
-    }
-
-    /**
-     * @param string $icon
-     */
-    public function setIcon($icon)
-    {
-        $this->icon = $icon;
-    }
-
-    public function __toString() {
-        return $this->getNom();
-    }
-
-
 }

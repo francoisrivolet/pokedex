@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Nature</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ nature.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ nature.nom }}</td>
+            </tr>
+            <tr>
+                <th>Nomen</th>
+                <td>{{ nature.nomEn }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('nature_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

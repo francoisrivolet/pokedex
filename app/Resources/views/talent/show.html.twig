@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Talent</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ talent.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ talent.nom }}</td>
+            </tr>
+            <tr>
+                <th>Nomen</th>
+                <td>{{ talent.nomEn }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ talent.description }}</td>
+            </tr>
+            <tr>
+                <th>Effetscombat</th>
+                <td>{{ talent.effetsCombat }}</td>
+            </tr>
+            <tr>
+                <th>Effetterrain</th>
+                <td>{{ talent.effetTerrain }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('talent_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('talent_edit', { 'id': talent.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

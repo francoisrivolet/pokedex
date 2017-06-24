@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Natures list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Nomen</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for nature in natures %}
+            <tr>
+                <td><a href="{{ path('nature_show', { 'id': nature.id }) }}">{{ nature.id }}</a></td>
+                <td>{{ nature.nom }}</td>
+                <td>{{ nature.nomEn }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('nature_show', { 'id': nature.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

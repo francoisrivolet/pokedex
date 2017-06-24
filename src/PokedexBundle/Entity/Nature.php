@@ -1,10 +1,9 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: Fanfan2
- * Date: 19/06/2017
- * Time: 21:52
+ * Date: 24/06/2017
+ * Time: 02:42
  */
 
 namespace PokedexBundle\Entity;
@@ -14,16 +13,16 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Type
  *
- * @ORM\Table(name="type")
+ * @ORM\Table(name="nature")
  *
- * @ORM\Entity(repositoryClass="PokedexBundle\Repository\TypeRepository")
+ * @ORM\Entity(repositoryClass="PokedexBundle\Repository\NatureRepository")
  **
  */
-class Type
+class Nature
 {
     /**
      * @ORM\Id()
-     * @ORM\Column(type="integer", name="id_type")
+     * @ORM\Column(type="integer", name="id_nature")
      * @ORM\GeneratedValue()
      */
     private $id;
@@ -43,18 +42,20 @@ class Type
     private $nomEn;
 
     /**
-     * @ORM\Column(type="string", name="couleur", nullable=true)
+     * @ORM\ManyToOne(targetEntity="NomStatistique")
+     * @ORM\JoinColumn(name="augmente", referencedColumnName="id_nom_statistique", nullable=true)
      *
-     * @var string
+     * @var NomStatistique
      */
-    private $couleur;
+    private $augemente;
 
     /**
-     * @ORM\Column(type="string", name="icon", nullable=true)
+     * @ORM\ManyToOne(targetEntity="NomStatistique")
+     * @ORM\JoinColumn(name="augmente", referencedColumnName="id_nom_statistique", nullable=true)
      *
-     * @var string
+     * @var NomStatistique
      */
-    private $icon;
+    private $diminue;
 
     /**
      * @return mixed
@@ -105,40 +106,34 @@ class Type
     }
 
     /**
-     * @return string
+     * @return NomStatistique
      */
-    public function getCouleur()
+    public function getAugemente()
     {
-        return $this->couleur;
+        return $this->augemente;
     }
 
     /**
-     * @param string $couleur
+     * @param NomStatistique $augemente
      */
-    public function setCouleur($couleur)
+    public function setAugemente($augemente)
     {
-        $this->couleur = $couleur;
+        $this->augemente = $augemente;
     }
 
     /**
-     * @return string
+     * @return NomStatistique
      */
-    public function getIcon()
+    public function getDiminue()
     {
-        return $this->icon;
+        return $this->diminue;
     }
 
     /**
-     * @param string $icon
+     * @param NomStatistique $diminue
      */
-    public function setIcon($icon)
+    public function setDiminue($diminue)
     {
-        $this->icon = $icon;
+        $this->diminue = $diminue;
     }
-
-    public function __toString() {
-        return $this->getNom();
-    }
-
-
 }

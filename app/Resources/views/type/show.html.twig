@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Type</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ type.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ type.nom }}</td>
+            </tr>
+            <tr>
+                <th>Nomen</th>
+                <td>{{ type.nomEn }}</td>
+            </tr>
+            <tr>
+                <th>Couleur</th>
+                <td>{{ type.couleur }}</td>
+            </tr>
+            <tr>
+                <th>Icon</th>
+                <td>{{ type.icon }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('type_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Talents list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Nomen</th>
+                <th>Description</th>
+                <th>Effetscombat</th>
+                <th>Effetterrain</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for talent in talents %}
+            <tr>
+                <td><a href="{{ path('talent_show', { 'id': talent.id }) }}">{{ talent.id }}</a></td>
+                <td>{{ talent.nom }}</td>
+                <td>{{ talent.nomEn }}</td>
+                <td>{{ talent.description }}</td>
+                <td>{{ talent.effetsCombat }}</td>
+                <td>{{ talent.effetTerrain }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('talent_show', { 'id': talent.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('talent_edit', { 'id': talent.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('talent_new') }}">Create a new talent</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -63,6 +63,13 @@ class Pokemon
     private $taille;
 
     /**
+     * @ORM\Column(type="integer", name="pv", nullable=true)
+     *
+     * @var integer
+     */
+    private $pointDeVie;
+
+    /**
      * @ORM\Column(type="integer", name="attaque", nullable=true)
      *
      * @var integer
@@ -112,6 +119,20 @@ class Pokemon
     private $nbPasEclosion;
 
     /**
+     * @ORM\Column(type="integer", name="taux_capture", nullable=true)
+     *
+     * @var integer
+     */
+    private $tauxCapture;
+
+    /**
+     * @ORM\Column(type="integer", name="bonheur", nullable=true)
+     *
+     * @var integer
+     */
+    private $bonheur;
+
+    /**
      * @ORM\Column(type="string", name="img_generale", nullable=true)
      *
      * @var string
@@ -158,6 +179,63 @@ class Pokemon
      * )
      */
     private $attaques;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->talents = new ArrayCollection();
+        $this->attaques = new ArrayCollection();
+    }
+
+    /**
+     * Add talent
+     *
+     * @param \PokedexBundle\Entity\Talent $talent
+     *
+     * @return Pokemon
+     */
+    public function addTalent(Talent $talent)
+    {
+        $this->talents[] = $talent;
+
+        return $this;
+    }
+
+    /**
+     * Remove talent
+     *
+     * @param \PokedexBundle\Entity\Talent $talent
+     */
+    public function removeTalent(Talent $talent)
+    {
+        $this->talents->removeElement($talent);
+    }
+
+    /**
+     * Add attaque
+     *
+     * @param \PokedexBundle\Entity\Attaque $attaque
+     *
+     * @return Pokemon
+     */
+    public function addAttaque(Attaque $attaque)
+    {
+        $this->attaques[] = $attaque;
+
+        return $this;
+    }
+
+    /**
+     * Remove attaque
+     *
+     * @param \PokedexBundle\Entity\Attaque $attaque
+     */
+    public function removeattaque(Attaque $attaque)
+    {
+        $this->attaques->removeElement($attaque);
+    }
 
     /**
      * @return mixed
@@ -240,6 +318,22 @@ class Pokemon
     }
 
     /**
+     * @return int
+     */
+    public function getPointDeVie()
+    {
+        return $this->pointDeVie;
+    }
+
+    /**
+     * @param int $pointDeVie
+     */
+    public function setPointDeVie($pointDeVie)
+    {
+        $this->pointDeVie = $pointDeVie;
+    }
+
+        /**
      * @return int
      */
     public function getAttaque()
@@ -431,61 +525,53 @@ class Pokemon
         $this->talents = $talents;
     }
 
-
     /**
-     * Constructor
+     * @return mixed
      */
-    public function __construct()
+    public function getAttaques()
     {
-        $this->talents = new ArrayCollection();
-        $this->attaques = new ArrayCollection();
+        return $this->attaques;
     }
 
     /**
-     * Add talent
-     *
-     * @param \PokedexBundle\Entity\Talent $talent
-     *
-     * @return Pokemon
+     * @param mixed $attaques
      */
-    public function addTalent(Talent $talent)
+    public function setAttaques($attaques)
     {
-        $this->talents[] = $talent;
-
-        return $this;
+        $this->attaques = $attaques;
     }
 
     /**
-     * Remove talent
-     *
-     * @param \PokedexBundle\Entity\Talent $talent
+     * @return int
      */
-    public function removeTalent(Talent $talent)
+    public function getTauxCapture()
     {
-        $this->talents->removeElement($talent);
+        return $this->tauxCapture;
     }
 
     /**
-     * Add attaque
-     *
-     * @param \PokedexBundle\Entity\Attaque $attaque
-     *
-     * @return Pokemon
+     * @param int $tauxCapture
      */
-    public function addAttaque(Attaque $attaque)
+    public function setTauxCapture($tauxCapture)
     {
-        $this->attaques[] = $attaque;
-
-        return $this;
+        $this->tauxCapture = $tauxCapture;
     }
 
     /**
-     * Remove attaque
-     *
-     * @param \PokedexBundle\Entity\Attaque $attaque
+     * @return int
      */
-    public function removeattaque(Attaque $attaque)
+    public function getBonheur()
     {
-        $this->attaques->removeElement($attaque);
+        return $this->bonheur;
     }
+
+    /**
+     * @param int $bonheur
+     */
+    public function setBonheur($bonheur)
+    {
+        $this->bonheur = $bonheur;
+    }
+
+
 }

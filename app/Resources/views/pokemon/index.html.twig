@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Pokemons list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Nomen</th>
+                <th>Poids</th>
+                <th>Taille</th>
+                <th>Pointdevie</th>
+                <th>Attaque</th>
+                <th>Defense</th>
+                <th>Attaquespe</th>
+                <th>Defensespe</th>
+                <th>Vitesse</th>
+                <th>Description</th>
+                <th>Nbpaseclosion</th>
+                <th>Tauxcapture</th>
+                <th>Bonheur</th>
+                <th>Imggenerale</th>
+                <th>Imgminiature</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pokemon in pokemons %}
+            <tr>
+                <td><a href="{{ path('pokemon_show', { 'id': pokemon.id }) }}">{{ pokemon.id }}</a></td>
+                <td>{{ pokemon.nom }}</td>
+                <td>{{ pokemon.nomEn }}</td>
+                <td>{{ pokemon.poids }}</td>
+                <td>{{ pokemon.taille }}</td>
+                <td>{{ pokemon.pointDeVie }}</td>
+                <td>{{ pokemon.attaque }}</td>
+                <td>{{ pokemon.defense }}</td>
+                <td>{{ pokemon.attaqueSpe }}</td>
+                <td>{{ pokemon.defenseSpe }}</td>
+                <td>{{ pokemon.vitesse }}</td>
+                <td>{{ pokemon.description }}</td>
+                <td>{{ pokemon.nbPasEclosion }}</td>
+                <td>{{ pokemon.tauxCapture }}</td>
+                <td>{{ pokemon.bonheur }}</td>
+                <td>{{ pokemon.imgGenerale }}</td>
+                <td>{{ pokemon.imgMiniature }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('pokemon_show', { 'id': pokemon.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('pokemon_edit', { 'id': pokemon.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('pokemon_new') }}">Create a new pokemon</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Attaque</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ attaque.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ attaque.nom }}</td>
+            </tr>
+            <tr>
+                <th>Nomen</th>
+                <td>{{ attaque.nomEn }}</td>
+            </tr>
+            <tr>
+                <th>Puissance</th>
+                <td>{{ attaque.puissance }}</td>
+            </tr>
+            <tr>
+                <th>Precision</th>
+                <td>{{ attaque.precision }}</td>
+            </tr>
+            <tr>
+                <th>Pp</th>
+                <td>{{ attaque.pp }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ attaque.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('attaque_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('attaque_edit', { 'id': attaque.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
