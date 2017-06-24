@@ -8,6 +8,8 @@ php bin/console doctrine:database:create
 
 php bin/console doctrine:schema:update --force
 
+php bin/console generate:doctrine:crud --entity=PokedexBundle:Pokemon
+
 =========
 
 POPULATION BDD:
