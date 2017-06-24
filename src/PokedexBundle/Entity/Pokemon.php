@@ -11,7 +11,6 @@ namespace PokedexBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Joi
 
 
 /**
@@ -144,12 +143,21 @@ class Pokemon
 
     /**
      * @ORM\ManyToMany(targetEntity="Talent")
-     * @JoinTable(name="pokemons_talents",
-     *      joinColumns={@JoinColumn(name="id_pokemon", referencedColumnName="id")},
-     *      inverseJoinColumns={@JoinColumn(name="id_talent", referencedColumnName="id")}
-     *      )
+     * @ORM\JoinTable(name="pokemons_talents",
+     * joinColumns={@ORM\JoinColumn(name="id_pokemon", referencedColumnName="id_pokemon")},
+     * inverseJoinColumns={@ORM\JoinColumn(name="id_talent", referencedColumnName="id_talent")}
+     * )
      */
     private $talents;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Attaque")
+     * @ORM\JoinTable(name="pokemons_attaques",
+     * joinColumns={@ORM\JoinColumn(name="id_pokemon", referencedColumnName="id_pokemon")},
+     * inverseJoinColumns={@ORM\JoinColumn(name="id_attaque", referencedColumnName="id_attaque")}
+     * )
+     */
+    private $attaques;
 
     /**
      * @return mixed
@@ -430,6 +438,7 @@ class Pokemon
     public function __construct()
     {
         $this->talents = new ArrayCollection();
+        $this->attaques = new ArrayCollection();
     }
 
     /**
@@ -454,5 +463,29 @@ class Pokemon
     public function removeTalent(Talent $talent)
     {
         $this->talents->removeElement($talent);
+    }
+
+    /**
+     * Add attaque
+     *
+     * @param \PokedexBundle\Entity\Attaque $attaque
+     *
+     * @return Pokemon
+     */
+    public function addAttaque(Attaque $attaque)
+    {
+        $this->attaques[] = $attaque;
+
+        return $this;
+    }
+
+    /**
+     * Remove attaque
+     *
+     * @param \PokedexBundle\Entity\Attaque $attaque
+     */
+    public function removeattaque(Attaque $attaque)
+    {
+        $this->attaques->removeElement($attaque);
     }
 }
