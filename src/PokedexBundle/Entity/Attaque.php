@@ -75,8 +75,8 @@ class Attaque
     private $type;
 
     /**
-     * @ORM\OneToOne(targetEntity="CategorieAttaque")
-     * @ORM\JoinColumn(referencedColumnName="id_categorie_attaque", nullable=true)
+     * @ORM\ManyToOne(targetEntity="CategorieAttaque")
+     * @ORM\JoinColumn(name="categorie",referencedColumnName="id_categorie_attaque", nullable=true)
      * @var CategorieAttaque
      */
     private $categorie;
