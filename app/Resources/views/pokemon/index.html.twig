@@ -3,67 +3,63 @@
 {% block body %}
     <h1>Pokemons list</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Nomen</th>
-                <th>Poids</th>
-                <th>Taille</th>
-                <th>Pointdevie</th>
-                <th>Attaque</th>
-                <th>Defense</th>
-                <th>Attaquespe</th>
-                <th>Defensespe</th>
-                <th>Vitesse</th>
-                <th>Description</th>
-                <th>Nbpaseclosion</th>
-                <th>Tauxcapture</th>
-                <th>Bonheur</th>
-                <th>Imggenerale</th>
-                <th>Imgminiature</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for pokemon in pokemons %}
-            <tr>
-                <td><a href="{{ path('pokemon_show', { 'id': pokemon.id }) }}">{{ pokemon.id }}</a></td>
-                <td>{{ pokemon.nom }}</td>
-                <td>{{ pokemon.nomEn }}</td>
-                <td>{{ pokemon.poids }}</td>
-                <td>{{ pokemon.taille }}</td>
-                <td>{{ pokemon.pointDeVie }}</td>
-                <td>{{ pokemon.attaque }}</td>
-                <td>{{ pokemon.defense }}</td>
-                <td>{{ pokemon.attaqueSpe }}</td>
-                <td>{{ pokemon.defenseSpe }}</td>
-                <td>{{ pokemon.vitesse }}</td>
-                <td>{{ pokemon.description }}</td>
-                <td>{{ pokemon.nbPasEclosion }}</td>
-                <td>{{ pokemon.tauxCapture }}</td>
-                <td>{{ pokemon.bonheur }}</td>
-                <td>{{ pokemon.imgGenerale }}</td>
-                <td>{{ pokemon.imgMiniature }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('pokemon_show', { 'id': pokemon.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('pokemon_edit', { 'id': pokemon.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="row">
+            {% for pokemon in pokemons %}
+                <div class="list_pokemon-box col-md-4 col-xs-12">
+                    <a href="{{ path('pokemon_show', { 'id': pokemon.id }) }}">
+                        <div class="list_pokemon-box-content">
+                            <img src="{{ asset('img/pokemons-375px/'~pokemon.imgGenerale) }}" alt="{{ pokemon.nom }}" class="list_pokemon-box-img img-responsive" />
+                        </div>
+                        <div class="list_pokemon-box-text">
+                            <div class="list_pokemon-box-title">
+                                <h3>#{{ pokemon.id }} - {{ pokemon.nom }}</h3>
+                            </div>
+                            <hr />
+                            <span class="type type_1">Plante</span>
+                            <span class="type type_2">Poison</span>
+                            <div class="list_pokemon-box-description">
+                                <ul>
+                                    <li>PV : {{ pokemon.pointDeVie }}</li>
+                                    <li>Attaque : {{ pokemon.attaque }}</li>
+                                    <li>Defence : {{ pokemon.defense }}</li>
+                                    <li>Attaque Spéciale : {{ pokemon.attaqueSpe }}</li>
+                                    <li>Defence Spéciale : {{ pokemon.defenseSpe }}</li>
+                                    <li>Vitesse : {{ pokemon.vitesse }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 
-    <ul>
-        <li>
-            <a href="{{ path('pokemon_new') }}">Create a new pokemon</a>
-        </li>
-    </ul>
+    <div class="box">
+        <div class="box_content">
+            <img src="http://www.pokepedia.fr/images/thumb/e/ef/Bulbizarre-RFVF.png/250px-Bulbizarre-RFVF.png" alt="" class="box_img" />
+        </div>
+        <div class="box_text">
+            <div class="box_title">
+                <srong>Bulbizarre #001</srong>
+            </div>
+            <hr />
+            <span class="type type_1">Plante</span>
+            <span class="type type_2">Poison</span>
+            <div class="box_description">
+                <ul>
+                    <li>PV</li>
+                    <li>Attaque</li>
+                    <li>Defence</li>
+                    <li>Attaque Spéciale</li>
+                    <li>Defence Spéciale</li>
+                    <li>Vitesse</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+<a href="{{ path('pokemon_new') }}">Create a new pokemon</a>
+
 {% endblock %}
