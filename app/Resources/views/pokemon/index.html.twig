@@ -1,34 +1,30 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Pokemons list</h1>
+    <h1 class="list_pokemon-title">Pokemons list</h1>
 
     <div class="container">
         <div class="row">
             {% for pokemon in pokemons %}
-                <div class="list_pokemon-box col-md-4">
-                    <div class="list_pokemon-box-content">
-                        <img src="{{ asset('img/pokebip/'~pokemon.imgMoyenne) }}" alt="{{ pokemon.nom }}" class="list_pokemon-box-img img-responsive" />
-                    </div>
-                    <div class="list_pokemon-box-text">
-                        <div class="list_pokemon-box-title">
-                            <a href="{{ path('pokemon_show', { 'id': pokemon.id }) }}">
-                                #{{ pokemon.id }} - {{ pokemon.nom }}
-                            </a>
+                <div class="list_pokemon-bloc col-xs-12 col-sm-6 col-md-4">
+                    <a href="{{ path('pokemon_show', { 'id': pokemon.id }) }}">
+                        <div class="list_pokemon-bloc-child">
+                            <img src="{{ asset('img/pokebip/'~pokemon.imgMoyenne) }}" alt="{{ pokemon.nom }}" class="list_pokemon-bloc-img" />
+                            <div class="list_pokemon-box-name">
+                                {% if pokemon.id < 10 %}
+                                    <h4>#00{{ pokemon.id }} - {{ pokemon.nom }}</h4>
+                                {% elseif pokemon.id < 100 %}
+                                    <h4>#0{{ pokemon.id }} - {{ pokemon.nom }}</h4>
+                                {% else %}
+                                    <h4>#{{ pokemon.id }} - {{ pokemon.nom }}</h4>
+                                {% endif %}
+                            </div>
+                            <span class="type {{ pokemon.type1 }}">{{ pokemon.type1 }}</span>
+                            {% if pokemon.type2 %}
+                                <span class="type {{ pokemon.type2 }}">{{ pokemon.type2 }}</span>
+                            {% endif %}
                         </div>
-                        <span class="type type_1">Plante</span>
-                        <span class="type type_2">Poison</span>
-                        <div class="list_pokemon-box-description">
-                            <ul>
-                                <li>PV : {{ pokemon.pointDeVie }}</li>
-                                <li>Attaque : {{ pokemon.attaque }}</li>
-                                <li>Defence : {{ pokemon.defense }}</li>
-                                <li>Attaque Spéciale : {{ pokemon.attaqueSpe }}</li>
-                                <li>Defence Spéciale : {{ pokemon.defenseSpe }}</li>
-                                <li>Vitesse : {{ pokemon.vitesse }}</li>
-                            </ul>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             {% endfor %}
         </div>

@@ -1,0 +1,28 @@
+
+/**** LISTE POKEMONS ****/
+.list_pokemon-title{
+    text-align: center;
+    padding: 15px;
+}
+
+.list_pokemon-bloc{
+    margin:35px 0;
+    text-align: center;
+}
+
+.list_pokemon-bloc a{
+    color: black;
+    text-decoration: none;
+}
+
+.list_pokemon-bloc-img{
+    height: 150px;
+}
+
+.list_pokemon-bloc-child{
+    border:2px solid black;
+    height: 240px;
+    padding: 20px 0;
+    margin: auto;
+    width: 250px;
+}
