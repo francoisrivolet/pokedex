@@ -232,6 +232,8 @@ class Attaque
         $this->description = $description;
     }
 
-
+    public function __toString() {
+        return $this->getNom();
+    }
 
 }

@@ -13,7 +13,7 @@ class PokemonType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('nomEn')->add('poids')->add('taille')->add('pointDeVie')->add('attaque')->add('defense')->add('attaqueSpe')->add('defenseSpe')->add('vitesse')->add('description')->add('nbPasEclosion')->add('tauxCapture')->add('bonheur')->add('imgGenerale')->add('imgMiniature')->add('type1')->add('type2')->add('talents')->add('attaques');
+        $builder->add('nom')->add('nomEn')->add('poids')->add('taille')->add('pointDeVie')->add('attaque')->add('defense')->add('attaqueSpe')->add('defenseSpe')->add('vitesse')->add('description')->add('nbPasEclosion')->add('tauxCapture')->add('bonheur')->add('imgGrande')->add('imgMoyenne')->add('imgMiniature')->add('type1')->add('type2')->add('talents')->add('attaques');
     }
     
     /**

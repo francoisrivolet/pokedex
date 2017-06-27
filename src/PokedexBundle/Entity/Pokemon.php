@@ -133,11 +133,18 @@ class Pokemon
     private $bonheur;
 
     /**
-     * @ORM\Column(type="string", name="img_generale", nullable=true)
+     * @ORM\Column(type="string", name="img_grande", nullable=true)
      *
      * @var string
      */
-    private $imgGenerale;
+    private $imgGrande;
+
+    /**
+     * @ORM\Column(type="string", name="img_moyenne", nullable=true)
+     *
+     * @var string
+     */
+    private $imgMoyenne;
 
     /**
      * @ORM\Column(type="string", name="img_miniature", nullable=true)
@@ -448,18 +455,35 @@ class Pokemon
     /**
      * @return string
      */
-    public function getImgGenerale()
+    public function getImgGrande()
     {
-        return $this->imgGenerale;
+        return $this->imgGrande;
     }
 
     /**
-     * @param string $imgGenerale
+     * @param string $imgGrande
      */
-    public function setImgGenerale($imgGenerale)
+    public function setImgGrande($imgGrande)
     {
-        $this->imgGenerale = $imgGenerale;
+        $this->imgGrande = $imgGrande;
     }
+
+    /**
+     * @return string
+     */
+    public function getImgMoyenne()
+    {
+        return $this->imgMoyenne;
+    }
+
+    /**
+     * @param string $imgMoyenne
+     */
+    public function setImgMoyenne($imgMoyenne)
+    {
+        $this->imgMoyenne = $imgMoyenne;
+    }
+
 
     /**
      * @return string
